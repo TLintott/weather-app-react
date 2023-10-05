@@ -11,8 +11,7 @@ const [weatherData, setWeatherData] =useState({ready:false});
 const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
-    console.log(response.data);
-    setWeatherData({
+        setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
@@ -80,7 +79,7 @@ function search(){
            className="float-left"
             alt="{weatherData.description}"/>
            
-            <WeatherTemperature celsius={props.data.temperature} />
+            <WeatherTemperature celsius={props.data.temperature.current} />
         
            
             </div>
