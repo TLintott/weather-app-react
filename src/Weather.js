@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
+import WeatherTemperature from "./WeatherTemperature";
 
 //
 
@@ -42,7 +43,7 @@ function search(){
   setCity(event.target.value);  
   }
 
- //html.........................................
+ //.........................................
   if (weatherData.ready){
   return(
     <div className="Weather">
@@ -78,9 +79,9 @@ function search(){
           <img src= {weatherData.icon}
            className="float-left"
             alt="{weatherData.description}"/>
-            
-            <span className="temperature">{Math.round (weatherData.temperature)}</span>
-            <span className="unit">°C</span>
+           
+            <WeatherTemperature celsius={props.data.temperature} />
+        
            
             </div>
           </div>
