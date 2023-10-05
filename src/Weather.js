@@ -73,18 +73,16 @@ function search(){
           <li className="text-capitalize">{weatherData.description}</li>
       </ul>
       <div className="row">
-        <div className="col-6">
+        <div className="col-8">
           <div className="clearfix">
           <img src= {weatherData.icon}
            className="float-left"
             alt="{weatherData.description}"/>
-           
-            <WeatherTemperature celsius={props.data.temperature.current} />
-        
+        <WeatherTemperature celsius={weatherData.temperature} />
            
             </div>
           </div>
-           <div className="col-6">
+           <div className="col-4">
           <ul>
             <li>Feels Like: {Math.round(weatherData.feels)}°C </li>
             <li>Humidity: {weatherData.humidity}%</li>
