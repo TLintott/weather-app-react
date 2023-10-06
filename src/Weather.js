@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
+import WeatherIcon from "./WeatherIcon"
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherForcast from "./WeatherForcast"
 //
@@ -11,12 +12,13 @@ const [weatherData, setWeatherData] =useState({ready:false});
 const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
+    console.log(response);
         setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time *1000),
-      icon:`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`, 
+      icon: response.data.condition.icon,
       description:response.data.condition.description,
       wind: response.data.wind.speed,
       city: response.data.city,
@@ -75,9 +77,11 @@ function search(){
       <div className="row">
         <div className="col-8">
           <div className="clearfix">
-          <img src= {weatherData.icon}
-           className="float-left"
-            alt="{weatherData.description}"/>
+          
+         
+      <WeatherIcon code={weatherData.icon}/> 
+         
+        
         <WeatherTemperature celsius={weatherData.temperature} />
            
             </div>

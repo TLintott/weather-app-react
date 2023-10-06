@@ -1,5 +1,6 @@
 import React from "react";
 import "./WeatherForcast.css";
+import WeatherIcon from "./WeatherIcon"
 export default function WeatherForcast(){
 
     return (
@@ -7,7 +8,7 @@ export default function WeatherForcast(){
           <div classNamae="row"></div>  
            <div className="col"></div>  
             <div className="WeatherForcast-day">Thu</div>  
-             <div className="WeatherIcon">☀️</div>  
+             <WeatherIcon/> 
              <div className="WeatherForcast-temperature"> 
              <span className="WeatherTemp-max"> 18°</span>
              <span className="WeatherTemp-min"> 15°</span>   

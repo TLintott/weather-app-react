@@ -39,18 +39,17 @@ list-style: none;
 }
 
 .Weather .temperature{
-    color: #4C31A1;
+    color: #000;
     font-size: 64px;
     line-height: 1;
     font-weight: 400;
 
 }
 
-.Weather img{
+.Weather canvas{
     margin-right: 5px;
-    margin-bottom: 32px;
-    height: 74px;
-    width: 74px;
+    height: 52px;
+    width: 52px;
 }
 
 .Weather .unit{
