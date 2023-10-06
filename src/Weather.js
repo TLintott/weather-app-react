@@ -3,7 +3,7 @@ import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 import WeatherTemperature from "./WeatherTemperature";
-
+import WeatherForcast from "./WeatherForcast"
 //
 
 export default function Weather(props){
@@ -90,6 +90,7 @@ function search(){
             </ul>   
         </div>
         </div>
+        <WeatherForcast/>
     </div>
     )
 } else {
