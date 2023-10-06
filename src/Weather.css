@@ -48,8 +48,7 @@ list-style: none;
 
 .Weather canvas{
     margin-right: 5px;
-    height: 52px;
-    width: 52px;
+   
 }
 
 .Weather .unit{

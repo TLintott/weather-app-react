@@ -12,9 +12,9 @@ const [weatherData, setWeatherData] =useState({ready:false});
 const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
-    console.log(response);
         setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time *1000),
@@ -79,7 +79,7 @@ function search(){
           <div className="clearfix">
           
          
-      <WeatherIcon code={weatherData.icon}/> 
+      <WeatherIcon code={weatherData.icon} size={52}/> 
          
         
         <WeatherTemperature celsius={weatherData.temperature} />
@@ -94,7 +94,7 @@ function search(){
             </ul>   
         </div>
         </div>
-        <WeatherForcast/>
+        <WeatherForcast coordinates={weatherData.coordinates}/>
     </div>
     )
 } else {
