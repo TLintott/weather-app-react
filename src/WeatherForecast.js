@@ -31,7 +31,9 @@ if (loaded) {
                       <div className="col" key={index}>
            <WeatherForecastDay data={daileyForecast}/>
             </div>  
-              )
+              );
+              } else {
+                return null;
               }
             })}
       
