@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon"
 import WeatherTemperature from "./WeatherTemperature";
-import WeatherForcast from "./WeatherForcast"
+import WeatherForecast from "./WeatherForecast"
 //
 
 export default function Weather(props){
@@ -12,6 +12,7 @@ const [weatherData, setWeatherData] =useState({ready:false});
 const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
+    console.log(response);
         setWeatherData({
       ready: true,
       coordinates: response.data.coordinates,
@@ -94,7 +95,7 @@ function search(){
             </ul>   
         </div>
         </div>
-        <WeatherForcast coordinates={weatherData.coordinates}/>
+        <WeatherForecast coordinates={weatherData.coordinates}/>
     </div>
     )
 } else {
