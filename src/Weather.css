@@ -1,33 +1,29 @@
-body{
-
-background-image: url(/imgs/bgc.png);
-background-size: cover;
-background-repeat: no-repeat;
-
-
-
-}
 a{
     text-decoration: none;
 }
 .Weather{
+    background-image: url(/imgs/bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     font-family: 'Poppins', sans-serif;
-    border: 1px solid #b2b4ff;;
+    font-weight: 400;
     padding: 40px;
     border-radius: 8px;
-    color: #878787;
+    color: #000;
 }
 
 .Weather form{
-    border-bottom: 1px solid #b2b4ff;;
+    border-bottom: 1px solid #A3D2E4;;
     padding-bottom: 30px;
     margin-bottom: 20px;
 }
 
 .Weather h1{
-    color: #4C31A1;
+    font-family: 'Poppins', sans-serif ;
+    color: #314ba1;
     font-size: 38px;
-    font-weight: 400;
+    font-weight: bold;
     margin: 20px 0 10px 0;
     line-height: 29px;
 }
@@ -37,11 +33,14 @@ margin: 0;
 margin-top:5px;
 margin-bottom:20px;
 padding: 0;
+color: #000;
+
 }
 
 .Weather li{
 font-size: 16px;
-font-weight: 100;
+font-weight: 400;
+opacity: 0.8;
 line-height: 21px;
 list-style: none;
 }
@@ -67,11 +66,12 @@ list-style: none;
     }
 
 .Weather .w-btn{
-    background-color: #4C31A1;
+    background-color: #314ba1;
     color: #fff;
 }
 
 .Weather .form-control{
+
     display: block;
     width: 100%;
     padding: 0.375rem 0.75rem;
@@ -82,18 +82,21 @@ list-style: none;
     appearance: none;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #b2b4ff;
+    border: 1px solid #A3D2E4;
     border-radius: 6px;
     transition: #fff 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
-.Weather .form-control:focus{
+
+    .Weather .form-control:focus{
     color: #212529;
     background-color: #fff;
-    border-color: #b2b4ff;
+    border-color: #A3D2E4;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(76, 49, 161, 0.251);
+    box-shadow: 0 0 0 0.25rem rgba(12, 75, 161, 0.251);
 }
 
-
+.WeatherForecast{
+padding-top: 15px;
+}
 
 
