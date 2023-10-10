@@ -1,4 +1,12 @@
+body{
 
+background-image: url(/imgs/bgc.png);
+background-size: cover;
+background-repeat: no-repeat;
+
+
+
+}
 a{
     text-decoration: none;
 }
